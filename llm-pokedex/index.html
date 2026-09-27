@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search for Pokemon and explore their abilities, types, and base stats.">
+    <title>Pokédex Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="hero">
+            <p class="eyebrow">PokéAPI explorer</p>
+            <h1>Pokédex <span>Explorer</span></h1>
+            <p class="hero-copy">Search by name or Pokédex number to discover a Pokémon's story, abilities, and battle stats.</p>
+        </header>
+        <section class="search-panel" aria-labelledby="search-title">
+            <h2 id="search-title">Find a Pokémon</h2>
+            <form id="search-form" class="search-form">
+                <label for="pokemon-input">Name or Pokédex number</label>
+                <div class="search-row">
+                    <input id="pokemon-input" name="pokemon" type="search" placeholder="Try pikachu or 25" autocomplete="off" required>
+                    <button id="search-button" type="submit">Search</button>
+                </div>
+            </form>
+            <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+        </section>
+        <section id="pokemon-result" class="result-area" aria-live="polite" aria-label="Pokémon details">
+            <div class="empty-state">
+                <div class="pokeball-mark" aria-hidden="true">◓</div>
+                <h2>Your next discovery is waiting</h2>
+                <p>Search for a Pokémon to load its details from PokéAPI.</p>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
